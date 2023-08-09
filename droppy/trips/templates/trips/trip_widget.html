@@ -1,0 +1,7 @@
+{% if object_list %}
+    {% for obj in object_list %}
+        <option value="{{ obj.pk }}">{{ obj }}</option>
+    {% endfor %}
+{% else %}
+    <option value="" selected>---------</option>
+{% endif %}

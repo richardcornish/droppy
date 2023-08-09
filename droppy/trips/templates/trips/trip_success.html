@@ -1,0 +1,13 @@
+{% extends "trips/base.html" %}
+
+{% block content %}
+<h1>Success!</h1>
+
+<p>The <code>form.cleaned_data</code> of your submission was:</p>
+
+<pre><code>{{ request.session.cleaned_data }}</code></pre>
+
+<p>You should still process <code>form.cleaned_data</code> in the <code>form_valid</code> method of your view instead of relying on the session.</p>
+
+<p><a href="{% url 'trip_form' %}">Go back to form</a></p>
+{% endblock %}

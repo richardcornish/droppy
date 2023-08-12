@@ -1,0 +1,22 @@
+{% extends "matches/base.html" %}
+
+{% block content %}
+<h1>Success!</h1>
+
+<p>The <code>form.cleaned_data</code> of your submission was:</p>
+
+<pre><code>{{ request.session.cleaned_data }}</code></pre>
+
+<p>The teams of your submission was:</p>
+
+<dl>
+    <dt><code>home_team</code></dt>
+    <dd><code>{{ request.session.home_team }}</code></dd>
+    <dt><code>away_team</code></dt>
+    <dd><code>{{ request.session.away_team }}</code></dd>
+</dl>
+
+<p>You should still process <code>form.cleaned_data</code> in the <code>form_valid</code> method of your view instead of relying on the session.</p>
+
+<p><a href="{% url 'match_form' %}">Go back to form</a></p>
+{% endblock %}

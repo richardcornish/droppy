@@ -1,0 +1,65 @@
+[
+{
+    "model": "matches.season",
+    "pk": 1,
+    "fields": {
+        "number": 1
+    }
+},
+{
+    "model": "matches.season",
+    "pk": 2,
+    "fields": {
+        "number": 2
+    }
+},
+{
+    "model": "matches.season",
+    "pk": 3,
+    "fields": {
+        "number": 3
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 1,
+    "fields": {
+        "name": "Cubs"
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 2,
+    "fields": {
+        "name": "White Sox"
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 3,
+    "fields": {
+        "name": "Dodgers"
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 4,
+    "fields": {
+        "name": "Angels"
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 5,
+    "fields": {
+        "name": "Yankees"
+    }
+},
+{
+    "model": "matches.team",
+    "pk": 6,
+    "fields": {
+        "name": "Mets"
+    }
+}
+]

@@ -61,5 +61,86 @@
     "fields": {
         "name": "Mets"
     }
+},
+{
+    "model": "matches.match",
+    "pk": 1,
+    "fields": {
+        "season": 1,
+        "home_team": 1,
+        "away_team": 2
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 2,
+    "fields": {
+        "season": 1,
+        "home_team": 3,
+        "away_team": 4
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 3,
+    "fields": {
+        "season": 1,
+        "home_team": 5,
+        "away_team": 6
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 4,
+    "fields": {
+        "season": 2,
+        "home_team": 2,
+        "away_team": 1
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 5,
+    "fields": {
+        "season": 2,
+        "home_team": 4,
+        "away_team": 3
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 6,
+    "fields": {
+        "season": 2,
+        "home_team": 6,
+        "away_team": 5
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 7,
+    "fields": {
+        "season": 3,
+        "home_team": 1,
+        "away_team": 3
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 8,
+    "fields": {
+        "season": 3,
+        "home_team": 5,
+        "away_team": 2
+    }
+},
+{
+    "model": "matches.match",
+    "pk": 9,
+    "fields": {
+        "season": 3,
+        "home_team": 4,
+        "away_team": 6
+    }
 }
 ]

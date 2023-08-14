@@ -21,4 +21,12 @@ class Match(models.Model):
     away_team = models.ForeignKey(Team, related_name="away_team", on_delete=models.CASCADE)
 
     def __str__(self):
+        return f"{self.season}: {self.home_team}-{self.away_team}"
+
+    @property
+    def home_away(self):
         return f"{self.home_team}-{self.away_team}"
+
+    @property
+    def home_away_pk(self):
+        return f"{self.home_team.pk}-{self.away_team.pk}"

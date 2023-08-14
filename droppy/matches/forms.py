@@ -26,7 +26,7 @@ class MatchForm(forms.ModelForm):
                 pk = int(self.data.get("season"))
                 s = Season.objects.get(pk=pk)
                 qs = s.match_set.all()
-                choices = [(f"{obj.home_team.pk}-{obj.away_team.pk}", f"{obj.home_team}-{obj.away_team}") for obj in qs]
+                choices = [(f"{obj.home_away_pk}", f"{obj.home_away}") for obj in qs]
                 self.fields["home_away"].choices = choices
             except:
                 pass

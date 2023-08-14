@@ -1,6 +1,6 @@
 {% if object_list %}
     {% for obj in object_list %}
-        <option value="{{ obj.home_team.pk }}-{{ obj.away_team.pk }}">{{ obj.home_team }}-{{ obj.away_team }}</option>
+        <option value="{{ obj.home_away_pk }}">{{ obj.home_away }}</option>
     {% endfor %}
 {% else %}
     <option value="" selected>---------</option>

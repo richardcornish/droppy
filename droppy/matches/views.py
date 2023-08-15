@@ -1,7 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import FormView, ListView, TemplateView
 
-from .forms import MatchForm
+from .forms import MatchSelectionForm
 from .models import Match, Season
 
 
@@ -22,14 +22,20 @@ class HomeAwayWidgetView(ListView):
 
 
 class MatchFormView(FormView):
-    form_class = MatchForm
+    form_class = MatchSelectionForm
     template_name = "matches/match_form.html"
     success_url = reverse_lazy("match_success")
 
     def form_valid(self, form):
+        season = form.get_season()
+        home_team = form.get_home_team()
+        away_team = form.get_away_team()
+        match = form.get_match()
         self.request.session["cleaned_data"] = str(form.cleaned_data)
-        self.request.session["home_team"] = str(form.get_home_team())
-        self.request.session["away_team"] = str(form.get_away_team())
+        self.request.session["season"] = str(season)
+        self.request.session["home_team"] = str(home_team)
+        self.request.session["away_team"] = str(away_team)
+        self.request.session["match"] = str(match)
         return super().form_valid(form)
 
 

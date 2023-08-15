@@ -7,13 +7,17 @@
 
 <pre><code>{{ request.session.cleaned_data }}</code></pre>
 
-<p>The teams of your submission was:</p>
+<p>The processed data of your submission was:</p>
 
 <dl>
-    <dt><code>home_team</code></dt>
+    <dt>season</dt>
+    <dd><code>{{ request.session.season }}</code></dd>
+    <dt>home_team</dt>
     <dd><code>{{ request.session.home_team }}</code></dd>
-    <dt><code>away_team</code></dt>
+    <dt>away_team</dt>
     <dd><code>{{ request.session.away_team }}</code></dd>
+    <dt>match</dt>
+    <dd><code>{{ request.session.match }}</code></dd>
 </dl>
 
 <p>You should still process <code>form.cleaned_data</code> in the <code>form_valid</code> method of your view instead of relying on the session.</p>
